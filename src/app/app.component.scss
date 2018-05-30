@@ -1,0 +1,52 @@
+@import './shared/styles/mixins.scss';
+@import './shared/styles/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-auto-rows: 10% 83% 7%;
+  width: 100vw;
+  height: 100vh;
+}
+.main__header {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.main__header::after {
+  content: "";
+  background-image: url("../assets/royal.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.main__navigation {
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+.main__content {
+  @include padding-all();
+  @include padding-right(3rem);
+  grid-column: 2 / 3;
+  grid-row: 2;
+  overflow-y: auto;
+  height:100%;
+  background-color: $-color-secondary;
+}
+.main__footer {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

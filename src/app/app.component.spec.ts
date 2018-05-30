@@ -1,8 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NavigationModule } from './navigation/navigation.module';
+import { GamesSearchModule } from './games-search/games-search.module';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HeaderModule } from './header/header.module'
+import { FooterModule } from './footer/footer.module'
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        NavigationModule,
+        GamesSearchModule,
+        HttpClientTestingModule,
+        HeaderModule,
+        FooterModule
+      ],
       declarations: [
         AppComponent
       ],
@@ -22,6 +37,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to agralinski-lobby!');
+    expect(compiled.querySelector('h1').textContent).toContain('CazinoRoyalee');
   }));
 });

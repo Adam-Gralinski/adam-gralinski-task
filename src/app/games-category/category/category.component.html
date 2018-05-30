@@ -1,0 +1,7 @@
+<mat-card
+  class="category"
+  *ngIf="currentCategory">
+  <h2>{{currentCategory.name}}</h2>
+  <app-games-list [games]="games"></app-games-list>
+</mat-card>
+

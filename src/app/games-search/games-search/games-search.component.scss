@@ -1,0 +1,30 @@
+@import '../../shared/styles/variables.scss';
+@import '../../shared/styles/mixins.scss';
+.search__field {
+  width: 100%;
+  @include flex-row(flex-end);
+}
+.search__results {
+  padding: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  height: 0px;
+}
+.show {
+  padding: 2rem;
+  height:100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.search__field /deep/ .mat-form-field-infix {
+  width: 20rem;
+}
+.search__field /deep/ .mat-form-field-label,
+.search__field /deep/ .mat-input-element{
+  color: $-color-light;
+}
+.search__field /deep/ .mat-form-field-underline{
+  background-color: $-color-light;
+}

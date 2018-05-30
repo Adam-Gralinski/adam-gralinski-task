@@ -1,0 +1,8 @@
+@import '../../shared/styles/mixins.scss';
+@import '../../shared/styles/variables.scss';
+
+.category {
+  @include margin-vertical();
+  background-color: $-color-light;
+  color: $-color-dark;
+}

@@ -1,0 +1,13 @@
+@import '../../shared/styles/mixins.scss';
+.game-window {
+  height:90%;
+}
+.game-window__content {
+  height:100%;
+  width:100%;
+  @include flex-row(center);
+}
+.game-window__image {
+  max-width:100%;
+  max-height:90%;
+}

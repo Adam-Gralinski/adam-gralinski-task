@@ -1,0 +1,13 @@
+<nav class="navigation">
+  <h3 class="navigation__title">Categories:</h3>
+  <ul class="navigation__list">
+    <li *ngFor="let category of (categories | async)">
+      <button mat-button
+        class="navigation__item"
+        color="primary"
+        [routerLink]="['/category', category.slug]">
+          {{category.name}}
+      </button>
+    </li>
+  </ul>
+</nav>

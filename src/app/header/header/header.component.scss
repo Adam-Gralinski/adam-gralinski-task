@@ -1,0 +1,19 @@
+@import '../../shared/styles/mixins.scss';
+@import '../../shared/styles/variables.scss';
+.header {
+  height: 100%;
+  background-color: $-color-dark-transparent;
+}
+.header__title {
+  font-size: 1.4rem;
+  color: rgba(194,24,91, 0.8);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__text {
+  padding-left: 1rem;
+  font-family: 'Righteous', cursive;
+  margin: 0;
+}

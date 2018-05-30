@@ -1,0 +1,10 @@
+@import '../../../shared/styles/mixins.scss';
+.game-list {
+  width: 100%;
+  @include flex-row(space-between);
+  flex-wrap: wrap;
+  background-color: white;
+}
+.game-list__item {
+  padding: 1rem;
+}

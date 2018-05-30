@@ -1,0 +1,18 @@
+<div>
+  <div class="search__field">
+    <mat-form-field>
+      <input matInput
+        class="search__text"
+        [(ngModel)]="searchText"
+        (input)="searchTextChange()"
+        placeholder="Search">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="searchText=''">
+          <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+  </div>
+  <mat-card class="search__results" [ngClass]="{'show': games.length > 0}">
+    <h2>Search Results</h2>
+    <app-games-list [games]="games"></app-games-list>
+  </mat-card>
+</div>

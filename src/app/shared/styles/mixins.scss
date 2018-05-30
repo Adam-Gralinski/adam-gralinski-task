@@ -1,0 +1,26 @@
+
+@mixin margin-vertical() {
+  margin: 1rem 0;
+}
+
+@mixin padding-all() {
+  padding: 1rem;
+}
+
+@mixin padding-right($padding) {
+  padding-right: $padding;
+}
+
+@mixin flex-column($justify){
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: $justify
+}
+
+@mixin flex-row($justify){
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: $justify
+}

@@ -1,0 +1,8 @@
+<mat-card
+  class="game-window"
+  *ngIf="game">
+  <h2>{{game.name}}</h2>
+  <div class="game-window__content">
+    <img class="game-window__image" [src]="game.background" />
+  </div>
+</mat-card>
